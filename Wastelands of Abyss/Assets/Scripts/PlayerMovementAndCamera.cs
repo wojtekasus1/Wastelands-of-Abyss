@@ -4,20 +4,41 @@ using UnityEngine.UIElements;
 public class PlayerMovementAndCamera : MonoBehaviour
 {
     public float speed;
-    public Camera camera;
-    private void FixedUpdate()
+    //public Vector3 movement;
+    Rigidbody2D rb;
+    public Vector2 movement;
+    void Start()
     {
+        rb=GetComponent<Rigidbody2D>();   
+    }
+    void Update()
+    {
+    }
+    void FixedUpdate()
+    {
+        //float horizontal = Input.GetAxis("Horizontal");
+        //float vertical = Input.GetAxis("Vertical");
 
+
+        //if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        //{
+        //    movement = new Vector3(horizontal, vertical, 0).normalized;
+        //    transform.position = transform.position + movement * speed * Time.deltaTime;
+
+
+        //}
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        float x = transform.position.x;
-        float y = transform.position.y;
 
+        movement = new Vector2(horizontal, vertical).normalized;
 
-        if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        if (!Input.anyKey)
         {
-            transform.position = transform.position + new Vector3(horizontal * speed * Time.deltaTime, vertical * speed * Time.deltaTime, 0);
+            rb.linearVelocity = new Vector2(0, 0);
         }
-        camera.transform.position = new Vector3(x, y);
+        else
+        {
+            rb.linearVelocity = new Vector2(movement.x * speed, movement.y * speed);
+        }
     }
 }
