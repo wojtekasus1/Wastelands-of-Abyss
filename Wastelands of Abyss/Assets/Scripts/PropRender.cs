@@ -12,17 +12,14 @@ public class PropRender : MonoBehaviour
         SpawnProps();
     }
 
-    void Update()
-    {
-        
-    }
-
     void SpawnProps()
     {
         foreach (GameObject sp in propSpawnPoints)
         {
             int rand = Random.Range(0, propPrefabs.Count);
-            Instantiate(propPrefabs[rand],sp.transform.position, Quaternion.identity);
+            var prop = Instantiate(propPrefabs[rand],sp.transform.position, Quaternion.identity);
+            prop.transform.parent = gameObject.transform;
+
         }
     }
 }

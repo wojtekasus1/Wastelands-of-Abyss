@@ -1,5 +1,5 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
+
 
 public class EnemyController : MonoBehaviour
 {
@@ -8,10 +8,11 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
     }
     private void FixedUpdate()
     {
-        var distance = Vector3.Distance(player.transform.position, transform.position);
+       // var distance = Vector3.Distance(player.transform.position, transform.position);
 
         var delta = player.transform.position - transform.position;
         delta.Normalize();
@@ -21,4 +22,15 @@ public class EnemyController : MonoBehaviour
         transform.position = transform.position + (delta * moveSpeed);
 
     }
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Weapon"))
+        {
+            Destroy(gameObject);
+        }
+       
+    }
+
 }

@@ -11,9 +11,6 @@ public class PlayerMovementAndCamera : MonoBehaviour
     {
         rb=GetComponent<Rigidbody2D>();   
     }
-    void Update()
-    {
-    }
     void FixedUpdate()
     {
         //float horizontal = Input.GetAxis("Horizontal");
