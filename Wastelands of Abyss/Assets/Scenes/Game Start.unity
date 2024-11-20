@@ -136,10 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae94bcf41cc596489ec1ad44eea4e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 8722152223109124419, guid: 8df13f2b310401e40a0443f78c737613, type: 3}
-  speed: 4
-  destroyTime: 1
-  cooldown: 0.4
+  prefab: {fileID: 8722152223109124419, guid: 8df13f2b310401e40a0443f78c737613, type: 3}
+  damage: 1
+  speed: 5
+  cooldownDuration: 0.4
+  pierce: 1
 --- !u!1 &541940724
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +225,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7248470841342829866, guid: a5343caab27f2304391887e14c7ac037, type: 3}
   m_PrefabInstance: {fileID: 1385798917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &730569593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730569594}
+  m_Layer: 0
+  m_Name: EnemiesController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &730569594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730569593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0032105, y: 0.5536927, z: -267.40625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &737879666
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,11 +460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3242249679587214930, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
       propertyPath: m_Size.x
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3242249679587214930, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
       propertyPath: m_Size.y
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3500186645603613787, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
       propertyPath: m_Name
@@ -715,6 +747,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7318538704463109798, guid: a5343caab27f2304391887e14c7ac037, type: 3}
+      propertyPath: m_Name
+      value: Sword Controller
+      objectReference: {fileID: 0}
     - target: {fileID: 7563359618751186639, guid: a5343caab27f2304391887e14c7ac037, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -841,6 +877,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1111051729}
+  - {fileID: 730569594}
   - {fileID: 1385798917}
   - {fileID: 1360438441}
   - {fileID: 737879667}
