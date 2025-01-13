@@ -967,6 +967,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 7495603809259894010, guid: a5343caab27f2304391887e14c7ac037, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 99be9bb75fb23904faf893e1ee62f8b9, type: 2}
+    - target: {fileID: 7495603809259894010, guid: a5343caab27f2304391887e14c7ac037, type: 3}
+      propertyPath: invincibilityDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7563359618751186639, guid: a5343caab27f2304391887e14c7ac037, type: 3}
       propertyPath: m_Mass
       value: 1

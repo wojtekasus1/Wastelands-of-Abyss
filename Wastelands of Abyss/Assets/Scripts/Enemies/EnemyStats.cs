@@ -25,4 +25,13 @@ public class EnemyStats : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            PlayerStatus player = col.gameObject.GetComponent<PlayerStatus>();
+            player.TakeDamage(currentDamage);
+        }
+    }
 }
