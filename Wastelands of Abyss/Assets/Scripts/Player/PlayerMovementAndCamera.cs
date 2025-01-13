@@ -5,7 +5,7 @@ public class PlayerMovementAndCamera : MonoBehaviour
 {
     public float speed;
     //public Vector3 movement;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Vector2 movement;
     void Start()
     {

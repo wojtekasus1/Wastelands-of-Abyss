@@ -22,26 +22,26 @@ public class SwordController : WeaponController
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            AttackHelper(0f, 0.5f, 90, 0, speed);
+            AttackHelper(0f, 1.2f, 90, 0, weaponData.Speed);
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            AttackHelper(0f, -0.5f, -90, 0, -speed);
+            AttackHelper(0f, -0.2f, -90, 0, -weaponData.Speed);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            AttackHelper(0.5f, 0, 0, speed, 0);
+            AttackHelper(0.5f, 0.5f, 0, weaponData.Speed, 0);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            AttackHelper(-0.5f, 0, 180, -speed, 0);
+            AttackHelper(-0.5f, 0.5f, 180, -weaponData.Speed, 0);
         }
     }
     protected virtual void AttackHelper(float posx, float posy, int angel, float speedx, float speedy)
     {
         var playerPosition = player.transform.position;
         transform.position = new Vector3(playerPosition.x + posx, playerPosition.y + posy, 0);
-        latestShoot = Instantiate(prefab, transform.position, Quaternion.identity);
+        latestShoot = Instantiate(weaponData.Prefab, transform.position, Quaternion.identity);
         latestShoot.transform.eulerAngles = new Vector3(0, 0, angel);
         rb = latestShoot.GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(speedx, speedy);

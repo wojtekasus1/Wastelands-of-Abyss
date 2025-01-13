@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    public float health;
-    public float movementSpeed;
-    public float damage;
-    public float attackSpeed;
+
+    public EnemyScriptableObject EnemyData;
+
     protected GameObject player;
     protected SwordController SC;
 
@@ -16,23 +15,22 @@ public class Enemies : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     protected virtual void Update()
     { 
         Move();
-        if(health == 0)
-            Destroy(gameObject);
+        //if(EnemyData.Health == 0)
+        //    Destroy(gameObject);
     }
     protected virtual void Move()
     { 
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, movementSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, EnemyData.MovementSpeed * Time.deltaTime);
     }
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Weapon"))
-        {
-            health = health - SC.damage;
-        }
+    //protected virtual void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Weapon"))
+    //    {
+    //        EnemyData.health = EnemyData.Health - SC.weaponData.Damage;
+    //    }
 
-    }
+    //}
 }
