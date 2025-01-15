@@ -16,13 +16,13 @@ public class Enemies : MonoBehaviour
     }
 
     protected virtual void Update()
-    { 
+    {
         Move();
         //if(EnemyData.Health == 0)
         //    Destroy(gameObject);
     }
     protected virtual void Move()
-    { 
+    {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, EnemyData.MovementSpeed * Time.deltaTime);
     }
     //protected virtual void OnTriggerEnter2D(Collider2D collision)

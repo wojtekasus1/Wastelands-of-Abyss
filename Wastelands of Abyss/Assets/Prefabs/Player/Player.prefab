@@ -44,11 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae94bcf41cc596489ec1ad44eea4e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8722152223109124419, guid: 8df13f2b310401e40a0443f78c737613, type: 3}
-  damage: 1
+  weaponData: {fileID: 0}
   speed: 5
-  cooldownDuration: 0.4
-  pierce: 1
+  prefab: {fileID: 0}
 --- !u!1 &527134118285128084
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88a7c33796f80648bd2193e59d54250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  playerData: {fileID: 0}
+  invincibilityDuration: 0
 --- !u!114 &297289578112818974
 MonoBehaviour:
   m_ObjectHideFlags: 0
