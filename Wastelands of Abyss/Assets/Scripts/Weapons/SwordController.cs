@@ -10,6 +10,9 @@ public class SwordController : WeaponController
     private GameObject player;
     private GameObject latestShoot;
 
+    [SerializeField] public float speed = 5f;
+    [SerializeField] private GameObject prefab; 
+
     protected override void Start()
     {
         base.Start();
@@ -20,29 +23,56 @@ public class SwordController : WeaponController
     {
         base.Attack();
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.UpArrow))
         {
-            AttackHelper(0f, 1.2f, 90, 0, weaponData.Speed);
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                float diagonalSpeed = speed / Mathf.Sqrt(2);
+                AttackHelper(0f, 0.5f, 45, diagonalSpeed, diagonalSpeed);
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                float diagonalSpeed = speed / Mathf.Sqrt(2);
+                AttackHelper(0f, 0.5f, 135, -diagonalSpeed, diagonalSpeed);
+            }
+            else
+            {
+                AttackHelper(0f, 0.5f, 90, 0, speed);
+            }
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKey(KeyCode.DownArrow))
         {
-            AttackHelper(0f, -0.2f, -90, 0, -weaponData.Speed);
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                float diagonalSpeed = speed / Mathf.Sqrt(2);
+                AttackHelper(0f, 0.5f, -45, diagonalSpeed, -diagonalSpeed);
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                float diagonalSpeed = speed / Mathf.Sqrt(2);
+                AttackHelper(0f, 0.5f, -135, -diagonalSpeed, -diagonalSpeed);
+            }
+            else
+            {
+                AttackHelper(0f, 0.5f, -90, 0, -speed);
+            }
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            AttackHelper(0.5f, 0.5f, 0, weaponData.Speed, 0);
+            AttackHelper(0f, 0.5f, 0, speed, 0);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
-            AttackHelper(-0.5f, 0.5f, 180, -weaponData.Speed, 0);
+            AttackHelper(0f, 0.5f, 180, -speed, 0);
         }
     }
-    protected virtual void AttackHelper(float posx, float posy, int angel, float speedx, float speedy)
+
+    protected virtual void AttackHelper(float posx, float posy, int angle, float speedx, float speedy)
     {
         var playerPosition = player.transform.position;
         transform.position = new Vector3(playerPosition.x + posx, playerPosition.y + posy, 0);
-        latestShoot = Instantiate(weaponData.Prefab, transform.position, Quaternion.identity);
-        latestShoot.transform.eulerAngles = new Vector3(0, 0, angel);
+        latestShoot = Instantiate(prefab, transform.position, Quaternion.identity);
+        latestShoot.transform.eulerAngles = new Vector3(0, 0, angle);
         rb = latestShoot.GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(speedx, speedy);
     }
