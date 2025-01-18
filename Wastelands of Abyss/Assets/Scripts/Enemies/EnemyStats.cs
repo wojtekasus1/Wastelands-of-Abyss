@@ -16,7 +16,7 @@ public class EnemyStats : MonoBehaviour
         currentMs = enemyData.MovementSpeed;
         currentHealth = enemyData.Health;
         currentDamage = enemyData.Damage;
-        xpValue = 10;
+        xpValue = 70;
     }
 
     public void TakeDamage(float dmg){
