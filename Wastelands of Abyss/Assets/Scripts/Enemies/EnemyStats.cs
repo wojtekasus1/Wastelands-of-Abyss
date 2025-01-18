@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class EnemyStats : MonoBehaviour
         currentMs = enemyData.MovementSpeed;
         currentHealth = enemyData.Health;
         currentDamage = enemyData.Damage;
+        xpValue = 10;
     }
 
     public void TakeDamage(float dmg){
@@ -22,12 +24,13 @@ public class EnemyStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();    
+            Die();
         }
     }
+
     private void Die()
     {
-        PlayerExperience playerExperience = FindObjectOfType<PlayerExperience>();
+        PlayerExperience playerExperience = FindFirstObjectByType<PlayerExperience>();
         if (playerExperience != null)
         {
             playerExperience.AddExperience(xpValue);

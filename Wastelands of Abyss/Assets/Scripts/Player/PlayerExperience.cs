@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class PlayerExperience : MonoBehaviour
 {
-    public int currentXP = 0;
-    public int requiredXP = 100;
-    public int level = 1;
+    public int currentXP;
+    public int requiredXP;
+    public int level;
     public Slider xpSlider;
     public Text levelText;
 
@@ -32,7 +32,7 @@ public class PlayerExperience : MonoBehaviour
     }
     private void UpdateXPBar()
     {
-        xpSlider.value = (float)currentXP / requiredXP;  // Aktualizowanie paska XP
+        xpSlider.value = (int)currentXP / requiredXP;  // Aktualizowanie paska XP
         levelText.text = "Level: " + level;              // Aktualizowanie tekstu z poziomem
     }
 }
