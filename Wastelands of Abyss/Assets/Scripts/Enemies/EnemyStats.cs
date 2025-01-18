@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -8,6 +8,7 @@ public class EnemyStats : MonoBehaviour
     float currentHealth;
     float currentDamage;
     float currentAs;
+    int xpValue;
 
     private void Awake()
     {
@@ -21,9 +22,17 @@ public class EnemyStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);    
+            Die();    
         }
-
+    }
+    private void Die()
+    {
+        PlayerExperience playerExperience = FindObjectOfType<PlayerExperience>();
+        if (playerExperience != null)
+        {
+            playerExperience.AddExperience(xpValue);
+        }
+        Destroy(gameObject);
     }
 
     private void OnCollisionStay2D(Collision2D col)

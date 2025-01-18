@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 public class PlayerExperience : MonoBehaviour
 {
-    public float currentXP = 0;
-    public float requiredXP = 100;
-    public float level = 1;
+    public int currentXP = 0;
+    public int requiredXP = 100;
+    public int level = 1;
+    public Slider xpSlider;
+    public Text levelText;
 
-    public void AddExperience(float amount)
+    public void AddExperience(int amount)
     {
         currentXP += amount;
 
@@ -13,13 +17,22 @@ public class PlayerExperience : MonoBehaviour
         {
             LevelUp();
         }
+
+        UpdateXPBar();
     }
 
     private void LevelUp()
     {
         level++;
         currentXP -= requiredXP;
-        requiredXP = Mathf.RoundToInt(requiredXP * 1.2f); // Kolejny poziom zwiekszy req xp o 20%
-        Debug.Log("Level Up! Nowe poziom: " + level);
+        requiredXP = Mathf.RoundToInt(requiredXP * 1.2f); //Zwiekszenie wymaganego xp o 20% poprzedniej wartosci
+        Debug.Log("Level Up! Nowy poziom: " + level);
+
+        UpdateXPBar();
+    }
+    private void UpdateXPBar()
+    {
+        xpSlider.value = (float)currentXP / requiredXP;  // Aktualizowanie paska XP
+        levelText.text = "Level: " + level;              // Aktualizowanie tekstu z poziomem
     }
 }
