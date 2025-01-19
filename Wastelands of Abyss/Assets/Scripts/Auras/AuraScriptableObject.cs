@@ -18,4 +18,11 @@ public class AuraScriptableObject : ScriptableObject
     [SerializeField]
     float cooldownDuration;
     public float CooldownDuration { get => cooldownDuration; private set => cooldownDuration = value; }
+
+    [SerializeField]
+    float nextDamageTime;
+    public float NextDamageTime { get => nextDamageTime; private set => nextDamageTime = value; }
+    [SerializeField]
+    float knockBackForce;
+    public float KnockBackForce { get => knockBackForce; private set => knockBackForce = value;}
 }

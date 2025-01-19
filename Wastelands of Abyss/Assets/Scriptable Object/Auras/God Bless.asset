@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5034c0c3df291b4439b57c3fb9e8b664, type: 3}
   m_Name: God Bless
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 2263786298232036747, guid: 5cf6f3553fc54c343ad074a7e0398ce1, type: 3}
   damage: 0
   speed: 150
-  cooldownDuration: 1
+  cooldownDuration: 0.2
+  nextDamageTime: 0
+  knockBackForce: 10

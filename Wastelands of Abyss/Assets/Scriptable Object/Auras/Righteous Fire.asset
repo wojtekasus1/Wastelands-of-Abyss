@@ -16,3 +16,4 @@ MonoBehaviour:
   damage: 1
   speed: 200
   cooldownDuration: 1
+  nextDamageTime: 1

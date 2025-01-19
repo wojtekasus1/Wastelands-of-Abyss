@@ -1,20 +1,19 @@
 using UnityEngine;
 
-public class AuraKnockback : MonoBehaviour
+public class GodBless : AurasBehaviour
 {
-    public AuraScriptableObject auraData;
-    public float knockbackForce = 0.5f;
+   // public float knockbackForce = 0.5f;
 
     private float nextKnockbackTime;
 
-    private void Update()
+    protected override void Update()
     {
-        transform.Rotate(0, 0, -auraData.Speed * Time.deltaTime);
+        base.Update();
 
         if (Time.time >= nextKnockbackTime)
         {
             ApplyKnockbackToEnemies();
-            nextKnockbackTime = Time.time + auraData.CooldownDuration;
+            nextKnockbackTime = Time.time + currentCooldownduration;
         }
     }
 
@@ -26,7 +25,7 @@ public class AuraKnockback : MonoBehaviour
             if (enemyRigidbody != null)
             {
                 Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                enemyRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+                enemyRigidbody.AddForce(knockbackDirection * currentKnockBackForce, ForceMode2D.Impulse);
             }
         }
     }
@@ -42,7 +41,7 @@ public class AuraKnockback : MonoBehaviour
                 if (enemyRigidbody != null)
                 {
                     Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
-                    enemyRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+                    enemyRigidbody.AddForce(knockbackDirection * currentKnockBackForce, ForceMode2D.Impulse);
                 }
             }
         }

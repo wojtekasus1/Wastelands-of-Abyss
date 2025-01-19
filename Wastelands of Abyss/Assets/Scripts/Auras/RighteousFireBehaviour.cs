@@ -1,21 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AuraBehaviour : MonoBehaviour
+public class AuraBehaviour : AurasBehaviour
 {
-    public AuraScriptableObject auraData;
 
-    private float nextDamageTime;
     private List<Collider2D> enemiesInAura = new List<Collider2D>();
 
-    private void Update()
+    protected override void Update()
     {
-        transform.Rotate(0, 0, auraData.Speed * Time.deltaTime);
+        base.Update();
         
-        if (Time.time >= nextDamageTime)
+        if (Time.time >= currentNextDamageTime)
         {
             ApplyDamageToEnemies();
-            nextDamageTime = Time.time + auraData.CooldownDuration;
+            currentNextDamageTime = Time.time + currentCooldownduration;
         }
     }
 
@@ -53,7 +51,7 @@ public class AuraBehaviour : MonoBehaviour
             EnemyStats enemy = enemyCollider.GetComponent<EnemyStats>();
             if (enemy != null)
             {
-                enemy.TakeDamage(auraData.Damage);
+                enemy.TakeDamage(currentDamage);
             }
             else
             {

@@ -10,8 +10,10 @@ public class SwordController : WeaponController
     private GameObject player;
     private GameObject latestShoot;
 
-    [SerializeField] public float speed = 5f;
-    [SerializeField] private GameObject prefab; 
+    [SerializeField] 
+    public float speed = 5f;
+    [SerializeField] 
+    private GameObject prefab; 
 
     protected override void Start()
     {
