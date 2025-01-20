@@ -348,7 +348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3941533437383323490}
-  - component: {fileID: 3489224814587785310}
   m_Layer: 0
   m_Name: Resp Handler
   m_TagString: Untagged
@@ -379,28 +378,6 @@ Transform:
   - {fileID: 54939482814538426}
   m_Father: {fileID: 3134864650344322285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3489224814587785310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5362082711522134112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54d1d9490fad8d4db845230e02fa2a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: []
-  spawnhandler:
-  - {fileID: 4717814578737334703}
-  - {fileID: 6168380175714260102}
-  - {fileID: 4488545168897034479}
-  - {fileID: 6296100287397376407}
-  - {fileID: 1998274565261274949}
-  - {fileID: 527134118285128084}
-  - {fileID: 6845213686727933276}
-  - {fileID: 3612282351220290703}
 --- !u!1 &6168380175714260102
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  rb: {fileID: 0}
+  rb: {fileID: 7563359618751186639}
   movement: {x: 0, y: 0}
 --- !u!114 &7495603809259894010
 MonoBehaviour:

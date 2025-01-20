@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
 
     public List<Wave> waves;
     public int currentWaveCount;
+
     [Header("Spawn Positions")]
     public List<Transform> relativeSpawnPoints;
 
@@ -39,6 +40,8 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindAnyObjectByType<PlayerStatus>().transform;
         CalculateWaveQuota();
+        currentWaveCount = 0;
+
     }
 
     // Update is called once per frame
@@ -62,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
     { 
         yield return new WaitForSeconds(waveInterval);
 
-        if(currentWaveCount < waves.Count - 1)
+        if(currentWaveCount < waves.Count - 1 && waves[currentWaveCount].spawnCount == waves[currentWaveCount].waveQuota)
         {
             currentWaveCount++;
             CalculateWaveQuota();
@@ -93,7 +96,7 @@ public class EnemySpawner : MonoBehaviour
                         return;
                     }
 
-                    Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0,relativeSpawnPoints.Count)].position, Quaternion.identity);
+                    Instantiate(enemyGroup.enemyPrefab, relativeSpawnPoints[Random.Range(0,relativeSpawnPoints.Count)].position, Quaternion.identity);
 
                    /* Vector2 spawnPosition = new Vector2(player.position.x + Random.Range(-10f,10f), player.position.y + Random.Range(-10f,10f));
                     Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);*/

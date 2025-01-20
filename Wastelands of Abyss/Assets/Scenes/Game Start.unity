@@ -680,12 +680,43 @@ MonoBehaviour:
   waves:
   - waveName: Wave1
     enemyGroups:
-    - enemyName: RedGolem
-      enemyCount: 60
+    - enemyName: RedGolems
+      enemyCount: 28
       spawnCount: 0
       enemyPrefab: {fileID: 4121329588840133328, guid: 48b8710e295a8a746bc1cba11b9900ed, type: 3}
     waveQuota: 0
-    spawnInterval: 1
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave2
+    enemyGroups:
+    - enemyName: Spiders
+      enemyCount: 28
+      spawnCount: 0
+      enemyPrefab: {fileID: 487621524325642739, guid: 50b216cdd1929a344a8708c815ba04ea, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave3
+    enemyGroups:
+    - enemyName: Spiders
+      enemyCount: 28
+      spawnCount: 0
+      enemyPrefab: {fileID: 487621524325642739, guid: 50b216cdd1929a344a8708c815ba04ea, type: 3}
+    - enemyName: Redgolems
+      enemyCount: 28
+      spawnCount: 0
+      enemyPrefab: {fileID: 4121329588840133328, guid: 48b8710e295a8a746bc1cba11b9900ed, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave4
+    enemyGroups:
+    - enemyName: Redgolems
+      enemyCount: 100
+      spawnCount: 0
+      enemyPrefab: {fileID: 4121329588840133328, guid: 48b8710e295a8a746bc1cba11b9900ed, type: 3}
+    waveQuota: 0
+    spawnInterval: 0.5
     spawnCount: 0
   currentWaveCount: 0
   relativeSpawnPoints:
@@ -702,9 +733,9 @@ MonoBehaviour:
   - {fileID: 34476526}
   - {fileID: 1164184658}
   enemiesAlive: 0
-  maxEnemiesAllowed: 10
+  maxEnemiesAllowed: 30
   maxEnemiesReached: 0
-  waveInterval: 30
+  waveInterval: 60
 --- !u!4 &813338586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3941533437383323490, guid: a5343caab27f2304391887e14c7ac037, type: 3}
@@ -1400,24 +1431,23 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5639004479447873522, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 4299791118815207151, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 4570650373200341455, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 1942226607375386136, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 1020788003367109265, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 4143000885299376264, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 2131428370089063781, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 723251442667289316, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 2047129696346444562, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 6994885201418364900, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 5371526890113246443, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 1220856994914417963, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 1426079251627899617, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 7885326381876925410, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 8192076689470064204, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 7650101580641346304, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 4374727378783927357, guid: a5343caab27f2304391887e14c7ac037, type: 3}
-    - {fileID: 3489224814587785310, guid: a5343caab27f2304391887e14c7ac037, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 2907692107141456581, guid: a5343caab27f2304391887e14c7ac037, type: 3}
     m_AddedGameObjects:
