@@ -7,4 +7,5 @@ public class PlayerScriptableObject : ScriptableObject
     float health;
     public float Health { get => health; private set => health = value; }
 
+   
 }

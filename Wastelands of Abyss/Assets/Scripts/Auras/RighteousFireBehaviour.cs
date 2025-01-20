@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AuraBehaviour : AurasBehaviour
+public class RighteousFireBehaviour : AurasBehaviour
 {
 
     private List<Collider2D> enemiesInAura = new List<Collider2D>();

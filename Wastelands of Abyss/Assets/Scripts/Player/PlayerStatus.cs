@@ -4,13 +4,20 @@ public class PlayerStatus : MonoBehaviour
 {
     public PlayerScriptableObject playerData;
 
-    float currentHealth;
+    public float currentHealth;
 
     //I-Frames
     [Header("I-Frames")]
     public float invincibilityDuration;
     float invinicibilityTimer;
     bool isInvincible;
+
+    [Header("Exp")]
+    public int exp = 0;
+    public int level = 1;
+    public int experienceCap = 100;
+    public int experienceCapIncrease;
+
     void Awake()
     {
         currentHealth = playerData.Health;
@@ -25,6 +32,7 @@ public class PlayerStatus : MonoBehaviour
         {
             isInvincible = false;
         }
+        
     }
 
     public void TakeDamage(float dmg)
@@ -45,5 +53,21 @@ public class PlayerStatus : MonoBehaviour
     {
             //Destroy(gameObject);
             Debug.Log("killed");
+    }
+
+    public void IncreaseExp(int amount)
+    {
+        exp += amount;
+        LevelUpChecker();
+    }
+
+    void LevelUpChecker()
+    {
+        if(exp >= experienceCap)
+        {
+            level++;
+            exp -= experienceCap;
+            experienceCap += experienceCapIncrease;
+        }
     }
 }

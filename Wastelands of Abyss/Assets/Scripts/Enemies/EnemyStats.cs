@@ -8,6 +8,7 @@ public class EnemyStats : MonoBehaviour
     float currentHealth;
     float currentDamage;
     float currentAs;
+    int currentExpGive;
 
     public float despawnDistance = 20f;
     Transform player;
@@ -28,6 +29,7 @@ public class EnemyStats : MonoBehaviour
         currentMs = enemyData.MovementSpeed;
         currentHealth = enemyData.Health;
         currentDamage = enemyData.Damage;
+        currentExpGive = enemyData.Expgive;
     }
 
     public void TakeDamage(float dmg){
@@ -51,6 +53,8 @@ public class EnemyStats : MonoBehaviour
 
      void OnDestroy()
     {
+        PlayerStatus ps = FindAnyObjectByType<PlayerStatus>();
+        ps.IncreaseExp(currentExpGive);
         EnemySpawner es = FindAnyObjectByType<EnemySpawner>();
         es.OnEnemyKilled();
     }

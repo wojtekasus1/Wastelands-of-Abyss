@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc6b95af5dabac45a3c1abd0508adcf, type: 3}
-  m_Name: Enemy1
+  m_Name: BossGolem
   m_EditorClassIdentifier: 
-  health: 2
-  movementSpeed: 3.3
-  damage: 5
+  health: 20
+  movementSpeed: 3
+  damage: 20
+  expgive: 100

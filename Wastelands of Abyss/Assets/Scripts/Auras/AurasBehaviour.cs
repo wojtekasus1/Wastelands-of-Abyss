@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AurasBehaviour : MonoBehaviour
 {
+    PlayerStatus status;
     public AuraScriptableObject auraData;
     protected float currentDamage;
     protected float currentSpeed;
@@ -17,9 +18,16 @@ public class AurasBehaviour : MonoBehaviour
         currentKnockBackForce = auraData.KnockBackForce;
     }
 
+    protected virtual void Start()
+    {
+        status = FindAnyObjectByType<PlayerStatus>();
+    }
     // Update is called once per frame
     protected virtual void Update()
     {
         transform.Rotate(0, 0, currentSpeed * Time.deltaTime);
+
+       
     }
+
 }
