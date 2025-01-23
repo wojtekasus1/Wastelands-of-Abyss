@@ -43,7 +43,8 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
             enemy.TakeDamage(currentDamage);
             ReducePierce();
         }
-
+        if(collision.CompareTag("Wall"))
+            Destroy(gameObject);
     }
     void ReducePierce()
     {

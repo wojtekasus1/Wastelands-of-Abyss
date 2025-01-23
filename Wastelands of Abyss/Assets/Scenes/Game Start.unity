@@ -1239,6 +1239,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3500186645603613787, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3554432064139512701, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1323,6 +1327,38 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: propPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8159278164134075674, guid: 9d69d1473bd58df408ad023c5eba3fe6, type: 3}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2023374477709896613, guid: 1724a72d6110d1e4bb2e3636615647d2, type: 3}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1096508500125786968, guid: e11721bccde6bbf49ac098e46534a6c9, type: 3}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 7814152879142939979, guid: 9d20137fc0d3bff4cb5d0e4468db5361, type: 3}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3923882248609275551, guid: 62f5e2bd509f0c64fa0ca7363b6c5f86, type: 3}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[5]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102304464396843626, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
+      propertyPath: 'propPrefabs.Array.data[6]'
+      value: 
+      objectReference: {fileID: 7185084015254376488, guid: 1a038dd1c8dc29145882468ee1942208, type: 3}
     - target: {fileID: 7539389625129412857, guid: b4fa0f55f5bd4964ab2bfedcd1e9990c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1510,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5362082711522134112, guid: a5343caab27f2304391887e14c7ac037, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5785560928531530261, guid: a5343caab27f2304391887e14c7ac037, type: 3}
       propertyPath: m_LocalPosition.x
