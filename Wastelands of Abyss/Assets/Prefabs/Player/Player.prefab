@@ -690,7 +690,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 0}
+  currentHealth: 0
   invincibilityDuration: 0
+  exp: 0
+  level: 1
+  experienceCap: 100
+  experienceCapIncrease: 0
 --- !u!114 &297289578112818974
 MonoBehaviour:
   m_ObjectHideFlags: 0
