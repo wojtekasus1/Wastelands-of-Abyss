@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -9125874762028836186}
   - component: {fileID: 1784128270062881042}
   - component: {fileID: 8667580551426282924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6220194569379022534, guid: 4c92fdf190c298f43a958ea64410319e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: c2ed3e882eb3981468d09cb373166a83, type: 2}
-  movement: {x: 0, y: 0}
 --- !u!114 &-8778175762772525214
 MonoBehaviour:
   m_ObjectHideFlags: 0
