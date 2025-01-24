@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2387,6 +2387,10 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 11400000, guid: 99be9bb75fb23904faf893e1ee62f8b9, type: 2}
+    - target: {fileID: 7495603809259894010, guid: a5343caab27f2304391887e14c7ac037, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 2075353066}
     - target: {fileID: 7495603809259894010, guid: a5343caab27f2304391887e14c7ac037, type: 3}
       propertyPath: experienceCapIncrease
       value: 100
