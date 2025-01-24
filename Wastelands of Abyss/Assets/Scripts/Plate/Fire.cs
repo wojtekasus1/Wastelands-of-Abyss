@@ -7,7 +7,7 @@ public class Fire : MonoBehaviour
     private PlayerStatus ps;
     private float cdTimer = 5;
     public int damagePerSecond;
-    public float burnDuration = 5f;
+    public float burnDuration = 6f;
     private Coroutine damageCoroutine;
     void Start()
     {
@@ -21,9 +21,12 @@ public class Fire : MonoBehaviour
         if(cdTimer < 0 )
             Destroy(gameObject);
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.CompareTag("Player"))
+        {
             damageCoroutine = StartCoroutine(ApplyDamageOverTime(ps));
+        }
     }
 
     private IEnumerator ApplyDamageOverTime(PlayerStatus ps)
