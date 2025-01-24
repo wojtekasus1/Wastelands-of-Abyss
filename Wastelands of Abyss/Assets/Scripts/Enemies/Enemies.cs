@@ -5,6 +5,7 @@ public class Enemies : MonoBehaviour
 {
 
     public EnemyScriptableObject EnemyData;
+
     protected GameObject player;
    // protected SwordController SC;
 

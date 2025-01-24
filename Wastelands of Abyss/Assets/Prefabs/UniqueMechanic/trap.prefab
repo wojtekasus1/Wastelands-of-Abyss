@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21301006, guid: 40f539b353576a2448588d9417312eed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab:
-  - {fileID: 2660057477094676905, guid: 7f1f393bada39914d8b2d20f5c9c8863, type: 3}
   - {fileID: 4906815159009839591, guid: cec14f42cc2f6eb429ebecf619adf9e0, type: 3}
+  - {fileID: 2660057477094676905, guid: 7f1f393bada39914d8b2d20f5c9c8863, type: 3}
   HealthPrefab: {fileID: 5718375106991764972, guid: 204e6320be8d2124f90858114c365385, type: 3}

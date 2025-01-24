@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
     public PlayerScriptableObject playerData;
+    public GameObject deathScreen;
 
     public float currentHealth;
 
@@ -51,8 +53,9 @@ public class PlayerStatus : MonoBehaviour
     }
     protected void Kill()
     {
-            //Destroy(gameObject);
-            Debug.Log("killed");
+        //Destroy(gameObject);
+        deathScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void IncreaseExp(int amount)
